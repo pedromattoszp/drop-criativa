@@ -54,14 +54,15 @@ h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 
 .highlight { color: var(--highlight); }
 
+/* Correção de Compatibilidade do VS Code Aplicada */
 .text-gradient {
     background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
-    background-clip: text; /* Versão padrão para compatibilidade */
-    
+    background-clip: text; 
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Garante que o preenchimento seja transparente */
+    color: transparent; 
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -137,14 +138,14 @@ nav {
 }
 
 .logo img {
-    max-height: 50px; /* Define a altura máxima para caber na barra */
-    width: auto;      /* Mantém a proporção correta */
-    display: block;   /* Remove espaços extras indesejados abaixo da imagem */
+    max-height: 50px; 
+    width: auto;      
+    display: block;   
     transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.05); /* Um efeitozinho leve de zoom ao passar o mouse */
+    transform: scale(1.05); 
 }
 .nav-links {
     display: flex;
@@ -179,7 +180,7 @@ nav {
 .menu-toggle { display: none; color: var(--text-light); font-size: 1.5rem; cursor: pointer;}
 
 /* =========================================
-   Hero Section (Com Imagem de Fundo)
+   Hero Section
    ========================================= */
 #hero {
     min-height: 95vh; 
@@ -189,10 +190,8 @@ nav {
     padding-top: 80px; 
     position: relative;
     overflow: hidden;
-
-    /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
     background-image: linear-gradient(to right, rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.7)), 
-                      url('img/landing-page.jpg'); /* Substitua 'img/hero-bg.jpg' pela sua imagem */
+                      url('img/landing-page.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -207,6 +206,11 @@ nav {
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
+}
+
+.hero-ctas {
+    display: flex;
+    align-items: center;
 }
 
 /* =========================================
@@ -248,7 +252,6 @@ nav {
 }
 .bento-item:hover::before { left: 100%; }
 
-
 .icon-glow {
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -266,7 +269,7 @@ nav {
 .big-icon { font-size: 4rem; opacity: 0.8; }
 
 /* =========================================
-   Sobre Nós & Contato (Com Transição Suave)
+   Sobre Nós & Contato
    ========================================= */
 .dark-section {
     background-color: var(--bg-secondary);
@@ -291,9 +294,7 @@ nav {
     height: 100px; 
 }
 
-.shape-fill {
-    fill: var(--bg-main); 
-}
+.shape-fill { fill: var(--bg-main); }
 
 .split-layout {
     display: flex;
@@ -329,7 +330,6 @@ nav {
 .contact-wrapper p { margin-bottom: 2.5rem; }
 .big-btn { padding: 1.2rem 4rem; font-size: 1.1rem; }
 
-
 /* =========================================
    Footer
    ========================================= */
@@ -341,43 +341,39 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .footer-logo { margin-bottom: 1rem; opacity: 0.7;}
-/* Adicione logo abaixo da classe .footer-logo existente */
 
 .footer-logo img {
-    max-width: 180px; /* Um pouco maior que no menu fica legal no rodapé */
+    max-width: 180px; 
     height: auto;
     display: block;
-    margin: 0 auto;   /* Garante que fique centralizado */
+    margin: 0 auto;  
 }
+
 /* =========================================
-   NOVO: Botão WhatsApp (Do seu código)
+   Botão WhatsApp
    ========================================= */
 .float-whatsapp {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px;       /* Distância do fundo */
-    right: 20px;        /* Distância da direita */
-    background-color: #25D366; /* Cor verde oficial */
+    bottom: 20px;       
+    right: 20px;        
+    background-color: #25D366; 
     color: #FFF;
-    border-radius: 50px; /* Deixa redondinho */
+    border-radius: 50px; 
     text-align: center;
-    font-size: 30px;    /* Tamanho do ícone */
-    box-shadow: 2px 2px 3px #999; /* Sombra leve */
-    z-index: 1000;      /* Garante que fique por cima de tudo */
-    
-    /* Centralizar o ícone e tirar sublinhado */
+    font-size: 30px;    
+    box-shadow: 2px 2px 3px #999; 
+    z-index: 1000;      
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none; 
 }
 
-/* Efeito ao passar o mouse (Opcional) */
 .float-whatsapp:hover {
-    background-color: #1DA851; /* Um verde um pouco mais escuro */
+    background-color: #1DA851; 
 }
-
 
 /* =========================================
    CSS de Animação (Scroll Reveal)
@@ -396,9 +392,8 @@ footer {
     transform: translate(0, 0);
 }
 
-
 /* =========================================
-   Responsividade (Mobile)
+   Responsividade (Tablet)
    ========================================= */
 @media (max-width: 968px) {
     h1 { font-size: 2.8rem; }
@@ -411,10 +406,7 @@ footer {
         margin-top: 0;
     }
     
-    .hero-content {
-        margin: 0 auto; 
-    }
-    
+    .hero-content { margin: 0 auto; }
     .hero-ctas { justify-content: center; }
 
     .span-col-2 { grid-column: span 1; }
@@ -423,35 +415,41 @@ footer {
     .icon-right i { order: 1; margin-bottom: 1rem; }
 
     .split-layout { flex-direction: column; gap: 3rem; }
-    
     .wave-divider svg { height: 60px; }
 }
 
+/* =========================================
+   Responsividade (Mobile)
+   ========================================= */
 @media (max-width: 768px) {
-    .menu-toggle { display: block; z-index: 1001; }
+    h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 1.1rem; }
 
+    /* Layout do Menu Mobile Animado */
+    .menu-toggle { display: block; z-index: 1001; }
+    
     .nav-links {
-        display: flex; /* Muda de none para flex */
+        display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: -100%; /* Começa escondido fora da tela */
-        width: 80%;
+        right: -100%; /* Começa escondido à direita */
+        width: 70%;
         height: 100vh;
-        background: rgba(10, 10, 15, 0.98); /* Fundo escuro do site */
-        backdrop-filter: blur(15px);
+        background: rgba(10, 10, 15, 0.98); 
+        backdrop-filter: blur(10px);
         padding: 100px 2rem;
-        transition: all 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
         z-index: 1000;
         border-left: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Classe que o JS vai ativar */
     .nav-links.active {
         right: 0; /* Desliza para dentro da tela */
     }
 
-    .nav-links li { width: 100%; text-align: center; }
+    .nav-links li { width: 100%; text-align: center; margin-bottom: 1.5rem; }
     
     .nav-links a {
         font-size: 1.2rem;
@@ -459,7 +457,27 @@ footer {
         padding: 1rem;
     }
 
-    .bento-grid { grid-template-columns: 1fr; }
-    h1 { font-size: 2.2rem; }
-}
+    .btn-nav { margin-top: 1rem; }
 
+    .bento-grid { grid-template-columns: 1fr; }
+
+    /* Correção dos Botões no Mobile (Empilhados) */
+    .hero-ctas {
+        display: flex;
+        flex-direction: column; /* Faz ficar um embaixo do outro */
+        gap: 1.5rem;            /* Espaço entre o botão e o link */
+        width: 100%;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;            /* O botão principal ocupa toda a largura */
+        justify-content: center;
+    }
+
+    .cta-link {
+        margin-left: 0;         /* Tira a margem do desktop */
+        text-align: center;
+        display: block;
+    }
+}
