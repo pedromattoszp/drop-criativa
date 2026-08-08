@@ -1,143 +1,387 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drop Criativa | Marketing Digital</title>
-    <link rel="icon" href="img/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Sora:wght@300;600&display=swap" rel="stylesheet">
-    
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Drop Criativa – Estúdio de Desenvolvimento. Criação de sites premium, landing pages e automações inteligentes." />
+  <title>Drop Criativa | Desenvolvimento Web & Automação</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+  <meta name="theme-color" content="#6A00F4" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header id="header">
-        <nav>
-            <a href="#" class="logo">
-                <img src="img/logo.png" alt="Logo Drop Criativa">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">A Agência</a></li>
-                <li><a href="#contato" class="btn-nav">Contato</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="ph ph-list"></i>
-            </div>
-        </nav>
-    </header>
+  <header id="main-header" role="banner">
+    <nav class="nav-container" aria-label="Navegação principal">
+      <a href="#hero" class="logo" aria-label="Drop Criativa – Início">
+        <img src="img/logo.png" alt="Drop Criativa" class="logo-img" />
+      </a>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content" data-reveal="left">
-                <h1>Alavanque seu negócio no mundo <span class="text-gradient">digital</span>.</h1>
-                <p>Soluções criativas e estratégias de alta performance para sua empresa dominar o mercado.</p>
-                <div class="hero-ctas">
-                    <a href="#contato" class="cta-button primary-glow">Decolar meu Projeto</a>
-                    <a href="#servicos" class="cta-link">Ver soluções</a>
-                </div>
-            </div>
-        </section>
+      <ul class="nav-links" role="list">
+        <li><a href="#sobre" class="nav-link">O Estúdio</a></li>
+        <li><a href="#servicos" class="nav-link">Soluções</a></li>
+        <li><a href="#ecossistema" class="nav-link">Automação</a></li>
+        <li><a href="#portfolio" class="nav-link">Projetos</a></li>
+      </ul>
 
-        <section id="servicos" class="section-pad">
-            <div class="container">
-                <h2 data-reveal="up">Nossos <span class="highlight">Serviços</span></h2>
-                <p class="subtitle" data-reveal="up" data-delay="200">Estratégias integradas para resultados reais.</p>
-                <div class="bento-grid">
-    <div class="bento-item span-col-2" data-reveal="up">
-        <i class="ph ph-desktop-tower icon-glow"></i>
-        <h3>Criação de Sites & Landing Pages</h3>
-        <p>Desenvolvemos experiências digitais modernas, rápidas e focadas em conversão para todos os dispositivos.</p>
+      <div class="header-controls">
+        <a href="#contato" class="btn btn-primary btn-sm">Iniciar Projeto</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu mobile" hidden>
+      <ul role="list">
+        <li><a href="#sobre" class="nav-link">O Estúdio</a></li>
+        <li><a href="#servicos" class="nav-link">Soluções</a></li>
+        <li><a href="#ecossistema" class="nav-link">Automação</a></li>
+        <li><a href="#portfolio" class="nav-link">Projetos</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
     </div>
-    
-    <div class="bento-item" data-reveal="up" data-delay="100">
-        <i class="ph ph-instagram-logo icon-glow"></i>
-        <h3>Social Media</h3>
-        <p>Gestão estratégica para engajar sua comunidade e fortalecer sua marca.</p>
-    </div>
-    
-    <div class="bento-item" data-reveal="up" data-delay="200">
-        <i class="ph ph-paint-brush-broad icon-glow"></i>
-        <h3>Design Gráfico</h3>
-        <p>Identidade visual impactante que comunica a essência do seu negócio.</p>
-    </div>
-    
-    <div class="bento-item span-col-2" data-reveal="up">
-         <i class="ph ph-target icon-glow"></i>
-         <h3>Tráfego Pago (Ads)</h3>
-         <p>Campanhas de alta performance no Google e Meta Ads para atrair clientes qualificados.</p>
-    </div>
-    
-    <div class="bento-item" data-reveal="up" data-delay="100">
-        <i class="ph ph-map-pin icon-glow"></i>
-        <h3>Google Meu Negócio</h3>
-        <p>Seja encontrado facilmente por clientes locais no momento certo.</p>
-    </div>
+  </header>
 
-    <div class="bento-item" data-reveal="up" data-delay="200">
-    <i class="ph ph-ranking icon-glow"></i>
-    
-    <h3>SEO (Otimização)</h3>
-    <p>Alcance o topo das pesquisas do Google de forma orgânica e aumente sua visibilidade.</p>
-</div>
-</div>           
-                
-            </div>
-        </section>
+  <main id="main-content">
 
-        <section id="sobre" class="section-pad dark-section">
-             <div class="wave-divider">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-                </svg>
-             </div>
+    <!-- HERO MINIMALISTA & MISTERIOSO -->
+    <section id="hero" aria-label="Apresentação principal">
+      <div class="hero-bg" data-parallax="0.3" aria-hidden="true">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-orb hero-orb--1"></div>
+      </div>
 
-             <div class="container split-layout">
-                <div class="about-text" data-reveal="left">
-                    <h2>Sobre a <span class="highlight">Drop</span></h2>
-                    <p>A Drop Criativa não é apenas mais uma agência. Nascemos da paixão por conectar marcas e pessoas no ambiente digital.</p>
-                    <p>Nossa equipe é formada por especialistas obcecados por performance e criatividade. Entendemos que cada negócio é único, por isso fugimos de "receitas de bolo" e criamos estratégias personalizadas que geram resultados reais.</p>
-                </div>
-                <div class="about-visual" data-reveal="right">
-                     <div class="glass-card-stat">
-                         <h4>+150</h4>
-                         <p>Projetos Entregues</p>
-                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="section-pad">
-            <div class="container contact-wrapper" data-reveal="up">
-                <h2>Vamos conversar?</h2>
-                <p>Pronto para dar o próximo passo? Clique no botão abaixo e solicite uma análise gratuita do seu negócio.</p>
-                
-                <a href="https://wa.me/5511930078837?text=Olá,%20vim%20pelo%20site!" target="_blank" class="cta-button primary-glow big-btn">
-                    Solicitar Orçamento
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-    <div class="container footer-content">
-         <div class="footer-logo">
-            <img src="img/logo.png" alt="Logo Drop Criativa">
+      <div class="hero-content animate-on-scroll" data-animation="fade-up">
+        <span class="hero-badge">Desenvolvimento de Sites & Automações</span>
+        <h1 class="hero-title">
+          <span class="hero-title-fixed">Criamos suas</span>
+          <span class="typing-wrapper">
+            <span id="typing-word" aria-live="polite">plataformas web</span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </span>
+        </h1>
+        <p class="hero-subtitle">
+          Código sob medida para empresas que buscam alta conversão. Desenvolvemos sites exclusivos e automatizamos processos para você focar no que importa.
+        </p>
+        <div class="hero-actions">
+          <a href="#servicos" class="btn btn-primary btn-glow">Nossas Soluções</a>
+          <a href="#portfolio" class="btn btn-outline">Ver Projetos</a>
         </div>
-        <p>&copy; 2026 Drop Criativa. Todos os direitos reservados.</p>
+      </div>
+    </section>
+
+    <!-- SOBRE O ESTÚDIO COM PAINEL LIGHTHOUSE -->
+    <section id="sobre" aria-labelledby="sobre-heading">
+      <div class="container">
+        <div class="sobre-grid">
+          <div class="sobre-text animate-on-scroll" data-animation="fade-right">
+            <span class="section-tag">Desenvolvimento & Design</span>
+            <h2 id="sobre-heading">Lógica impecável,<br />estética singular.</h2>
+            <p>
+              A Drop Criativa nasceu para preencher uma lacuna no mercado: o abismo entre o design genérico e a programação mal estruturada. A nossa filosofia une o rigor da análise de sistemas com o refinamento estético do design gráfico.
+            </p>
+            <p>
+              Do front-end meticulosamente desenhado às lógicas de integração rodando no back-end, entregamos ativos digitais que não apenas impressionam visualmente, mas funcionam com velocidade máxima e foco em conversão.
+            </p>
+            <a href="#contato" class="btn btn-primary">Falar com um Especialista</a>
+          </div>
+
+          <!-- NOVO PAINEL: PERFORMANCE & UX -->
+          <div class="eco-visual animate-on-scroll" data-animation="fade-left">
+            <div class="glass-panel">
+              <div class="glass-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="glass-title">Lighthouse - Métricas de Qualidade</span>
+              </div>
+              <div class="glass-body">
+                <div class="perf-stats">
+                  <div class="perf-stat">
+                    <div class="circle">100%</div>
+                    <span>de Performance</span>
+                  </div>
+                  <div class="perf-stat">
+                    <div class="circle">100%</div>
+                    <span>de Acessibilidade</span>
+                  </div>
+                  <div class="perf-stat">
+                    <div class="circle">100%</div>
+                    <span>de SEO Técnico</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Ícones Flutuantes -->
+            <div class="floating-icon icon-figma"><i class="ph-fill ph-figma-logo"></i></div>
+            <div class="floating-icon icon-rocket"><i class="ph-fill ph-rocket"></i></div>
+            <div class="floating-icon icon-mobile"><i class="ph-fill ph-device-mobile-camera"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS (FOCO EM CÓDIGO) -->
+    <section id="servicos" aria-labelledby="servicos-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll" data-animation="fade-up">
+          <span class="section-tag">Soluções</span>
+          <h2 id="servicos-heading">O que nós<br />construímos</h2>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card Gigante: Web Dev -->
+          <article class="service-card tilt-card service-card--featured hero-card animate-on-scroll" data-animation="fade-up" data-delay="0">
+            <div class="card-icon"><i class="ph-bold ph-code" aria-hidden="true"></i></div>
+            <h3>Sites & Landing Pages</h3>
+            <p>Desenvolvimento front-end avançado (HTML, CSS, JavaScript). Criamos interfaces de alta conversão, com arquitetura otimizada para SEO Técnico e carregamento em milissegundos.</p>
+            <span class="card-tag">Core Business</span>
+          </article>
+
+          <!-- Automação -->
+          <article class="service-card tilt-card animate-on-scroll" data-animation="fade-up" data-delay="100">
+            <div class="card-icon"><i class="ph-bold ph-git-merge" aria-hidden="true"></i></div>
+            <h3>Automação de Processos</h3>
+            <p>Scripts customizados para eliminar o trabalho manual da sua equipe, conectando formulários, planilhas e e-mails de forma invisível e segura.</p>
+            <span class="card-tag">Eficiência</span>
+          </article>
+
+          <!-- Micro-Frontends -->
+          <article class="service-card tilt-card animate-on-scroll" data-animation="fade-up" data-delay="200">
+            <div class="card-icon"><i class="ph-bold ph-device-mobile" aria-hidden="true"></i></div>
+            <h3>Micro-Aplicações</h3>
+            <p>Desenvolvimento de Links de Bio premium e cartões de visita interativos (vCards), hospedados no seu próprio domínio com rastreamento nativo.</p>
+            <span class="card-tag">Presença Mobile</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: ECOSSISTEMA GOOGLE / AUTOMAÇÃO -->
+    <section id="ecossistema" aria-labelledby="eco-heading">
+      <div class="container">
+        <div class="eco-grid">
+          <div class="eco-text animate-on-scroll" data-animation="fade-right">
+            <span class="section-tag">Google Workspace</span>
+            <h2 id="eco-heading">O fim do trabalho<br />manual nas planilhas.</h2>
+            <p>
+              Sua empresa perde horas preciosas copiando e colando dados? Nós transformamos o ecossistema Google que você já usa em um software inteligente.
+            </p>
+            <p>
+              Através do <strong>Google Apps Script</strong>, escrevemos lógicas em JavaScript para fazer seus aplicativos conversarem entre si de forma autônoma.
+            </p>
+            <ul class="eco-list">
+              <li><i class="ph-bold ph-check-circle"></i> Google Sheets automatizados</li>
+              <li><i class="ph-bold ph-check-circle"></i> Triagem inteligente de Forms</li>
+              <li><i class="ph-bold ph-check-circle"></i> Disparo de e-mails dinâmicos</li>
+            </ul>
+          </div>
+          
+          <div class="eco-visual animate-on-scroll" data-animation="fade-left">
+            <div class="glass-panel">
+              <div class="glass-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="glass-title">app.js - Apps Script</span>
+              </div>
+              <div class="glass-body">
+                <pre><code>function onFormSubmit(e) {
+  const data = e.namedValues;
+  const sheet = SpreadsheetApp.getActive();
+  
+  // Lógica de triagem
+  const status = processLead(data);
+  
+  // Automação invisível
+  if(status === 'Quente') {
+    sendAlertToTeam(data);
+  }
+}</code></pre>
+              </div>
+            </div>
+            
+            <div class="floating-icon icon-sheets"><i class="ph-fill ph-file-csv"></i></div>
+            <div class="floating-icon icon-forms"><i class="ph-fill ph-list-checks"></i></div>
+            <div class="floating-icon icon-drive"><i class="ph-fill ph-cloud"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO (OS 4 CASES) -->
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <div class="section-header animate-on-scroll" data-animation="fade-up">
+          <span class="section-tag">Estudos de Caso</span>
+          <h2 id="portfolio-heading">Arquitetura digital<br />na prática</h2>
+        </div>
+
+        <div class="premium-cases-grid">
+          
+          <!-- CASE 1: RGV -->
+          <article class="premium-case-card animate-on-scroll" data-animation="fade-up" data-delay="0">
+            <div class="case-image-wrapper">
+              <img src="img/rgv.png" alt="Case RGV Climatização" />
+            </div>
+            <div class="case-info">
+              <h3>RGV Climatização</h3>
+              <p>Uma plataforma institucional focada em transmitir excelência técnica, desenvolvida sob medida para máxima performance no carregamento.</p>
+              <div class="case-tags"><span>Front-End</span><span>Performance</span></div>
+              <a href="https://rgvclimatizacao.com.br" target="_blank" class="case-link">Visitar o projeto <i class="ph-bold ph-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <!-- CASE 2: SOZO -->
+          <article class="premium-case-card animate-on-scroll" data-animation="fade-up" data-delay="150">
+            <div class="case-image-wrapper">
+              <img src="img/sozo.png" alt="Case Sozo Seguros" />
+            </div>
+            <div class="case-info">
+              <h3>Sozo Seguros</h3>
+              <p>Redesenho da jornada do usuário com foco mobile-first. Uma estrutura de código limpa para simplificar a captação de clientes.</p>
+              <div class="case-tags"><span>UI/UX Design</span><span>Mobile-First</span></div>
+              <a href="https://sozoseguros.com.br" target="_blank" class="case-link">Visitar o projeto <i class="ph-bold ph-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <!-- CASE 3: CONSULTTYPREV -->
+          <article class="premium-case-card animate-on-scroll" data-animation="fade-up" data-delay="300">
+            <div class="case-image-wrapper">
+              <img src="img/prev.png" alt="Case Consulttyprev" />
+            </div>
+            <div class="case-info">
+              <h3>Consulttyprev</h3>
+              <p>Um ambiente digital seguro e autoritário. Arquitetura otimizada para SEO local e estruturação de domínios corporativos.</p>
+              <div class="case-tags"><span>Web Design</span><span>SEO Técnico</span></div>
+              <a href="https://consulttyprev.com.br" target="_blank" class="case-link">Visitar o projeto <i class="ph-bold ph-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <!-- CASE 4: STYLESYSTEM (AUTOMAÇÃO) -->
+          <article class="premium-case-card animate-on-scroll" data-animation="fade-up" data-delay="450">
+            <div class="case-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Case StyleSystem" />
+            </div>
+            <div class="case-info">
+              <h3>StyleSystem – Gestão & CRM</h3>
+              <p>Automação completa do ecossistema de captação e vendas. Desenvolvemos scripts nativos que integram formulários a um banco de dados inteligente, poupando dezenas de horas da equipe e eliminando 100% as falhas humanas no controle de informações.</p>
+              <div class="case-tags"><span>Apps Script</span><span>Banco de Dados</span><span>Automação</span></div>
+              <div class="case-badge"><i class="ph-bold ph-check-circle"></i> Processo Interno Concluído</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO COM LINKS CLICÁVEIS -->
+    <section id="contato" aria-labelledby="contato-heading">
+      <div class="container">
+        <div class="contato-grid">
+          <div class="contato-info animate-on-scroll" data-animation="fade-right">
+            <span class="section-tag">Bora Codar?</span>
+            <h2 id="contato-heading">Descreva o seu<br />desafio técnico.</h2>
+            <p>Seja um site do zero ou um script para salvar dezenas de horas da sua equipe, estamos prontos para desenvolver a solução.</p>
+            <ul class="contato-list" role="list">
+              <li>
+                <i class="ph-bold ph-envelope" aria-hidden="true"></i> 
+                <a href="mailto:contato@dropcriativa.com.br" class="contact-link">contato@dropcriativa.com.br</a>
+              </li>
+              <li>
+                <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i> 
+                <a href="https://wa.me/5511930078837" target="_blank" rel="noopener" class="contact-link">(11) 93007-8837</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contato-form animate-on-scroll" data-animation="fade-left" id="contato-form" novalidate aria-label="Formulário de contato">
+            <div class="form-group">
+              <input type="text" id="nome" name="nome" placeholder=" " required autocomplete="name" />
+              <label for="nome">Nome ou Empresa</label>
+              <span class="form-error" role="alert" id="error-nome"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required autocomplete="email" />
+              <label for="email">E-mail</label>
+              <span class="form-error" role="alert" id="error-email"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="mensagem" name="mensagem" placeholder=" " rows="4" required></textarea>
+              <label for="mensagem">Detalhes do projeto (Site, Landing Page ou Automação)</label>
+              <span class="form-error" role="alert" id="error-mensagem"></span>
+            </div>
+            <!-- Botão sem o ícone do WhatsApp -->
+            <button type="submit" class="btn btn-primary btn-glow btn-full">
+              Enviar Briefing
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="main-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo" aria-label="Drop Criativa – Início">
+            <img src="img/logo.png" alt="Drop Criativa" class="logo-img" />
+          </a>
+          <p>Soluções em Web & Automação Inteligente.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="https://instagram.com/drop.criativa" target="_blank" rel="noopener noreferrer" class="instagram-pill">
+              <i class="ph-bold ph-instagram-logo" aria-hidden="true"></i>
+              <span class="instagram-pill__text">
+                <span class="instagram-pill__label">Nosso Instagram</span>
+                <span class="instagram-pill__handle">@drop.criativa</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h3>Estúdio</h3>
+          <ul role="list">
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#servicos">Soluções</a></li>
+            <li><a href="#portfolio">Projetos</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h3>Especialidades</h3>
+          <ul role="list">
+            <li><a href="#servicos">Sites Exclusivos</a></li>
+            <li><a href="#ecossistema">Automação Google</a></li>
+            <li><a href="#servicos">Micro-Aplicações</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h3>Contato</h3>
+          <ul role="list">
+            <li><a href="mailto:contato@dropcriativa.com.br">E-mail Comercial</a></li>
+            <li><a href="https://wa.me/5511930078837" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footer-year"></span> Drop Criativa. Todos os direitos reservados.</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
-    <a href="https://wa.me/5511930078837?text=Olá,%20vim%20pelo%20site!" class="float-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo" hidden>
+    <i class="ph-bold ph-arrow-up" aria-hidden="true"></i>
+  </button>
 
-    <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
