@@ -38,8 +38,22 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body { font-family: var(--font-body); background-color: var(--color-bg); color: var(--color-text); line-height: 1.7; overflow-x: hidden; }
+
+html, body { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; 
+  overflow-x: hidden; 
+  width: 100%; 
+  position: relative;
+}
+
+body { 
+  font-family: var(--font-body); 
+  background-color: var(--color-bg); 
+  color: var(--color-text); 
+  line-height: 1.7; 
+}
+
 img, svg { display: block; max-width: 100%; }
 ul[role="list"] { list-style: none; }
 a { text-decoration: none; color: inherit; }
@@ -289,4 +303,11 @@ strong { color: var(--color-text); font-weight: 600; }
   .perf-stat .circle { width: 50px; height: 50px; font-size: 0.85rem; border-width: 3px; }
   .perf-stat span { font-size: 0.6rem; }
   .floating-icon { width: 40px; height: 40px; font-size: 1.4rem; }
+
+  /* CONTENÇÃO DE OVERFLOW - ÍCONES FLUTUANTES */
+  .icon-mobile { right: -10px; }
+  .icon-rocket { right: -5px; }
+  .icon-figma { left: -10px; }
+  .icon-forms { left: -10px; }
+  .icon-sheets { right: -10px; }
 }
