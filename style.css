@@ -310,4 +310,16 @@ strong { color: var(--color-text); font-weight: 600; }
   .icon-figma { left: -10px; }
   .icon-forms { left: -10px; }
   .icon-sheets { right: -10px; }
+  .icon-drive { right: -10px; }
+
+  /* CORREÇÃO DO PAINEL DE CÓDIGO E FLEXBOX */
+  .eco-visual {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .glass-panel {
+    min-width: 0;
+    width: 100%;
+  }
 }
